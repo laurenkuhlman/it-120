@@ -1,0 +1,77 @@
+Create and populate a simple contact manager. It has a 1:many relation for person:phone. For full details, see create-activity.pdf:
+
+  Goals
+    • to be able to create a database
+    • to be able to create a database table
+    • to be able to describe a few datatypes (date, varchar, numbers)
+    • to be able to insert values into a table
+    • to be able to identify NULL values
+    • to describe primary keys
+  Framework
+    Automation
+      Databases accumulate state: they remember all that you have done to them
+      since they were created. That’s their job.
+      This is a problem when developing databases: if you type something into an
+      interactive session, it may have effect months from now. You might manually
+      alter a table, or add an important row, or create a table. If you start to rely on
+      it, but forget how you got it into the state you need, that is a problem.
+      To make sure your SQL and data are self-consistent, you can adopt a radical
+      process: regularly destroy everything and rebuild according to your instructions.
+      Each time you do this successfully, you have passed a test that your process is
+      documented and complete.
+      For every development project, you should write a script that does this. For the
+      database test, you could put all the commands in a file:
+        dropdb test
+        createdb test
+        psaql -d test -f commands.sql
+
+      On Windows, files ending in “.bat” can be run from the command line, and the
+      commands in them are executed one by one. You need to give the path to the
+      batch file. IF the above is stored in “reset.bat”:
+        .\reset.bat
+      On macOS or Linux, commands can be given to a shell interpreter. The easiest
+      way to do this is just supply the file with commands on the command line to
+      the interpreter:
+        bash -x reset.bat
+      Some notes on this:
+        • the extension is not important
+        • the -x tells the shell to print each command as it is run
+      Suggestion: I name my automation with a .bat extension, whether I am on Unix
+      or Windows. This way I can run the script on either platform, which is good for
+      collaboration.
+      Windows .bat files have comments that start with “@REM”; Unix shell comments
+      start with #. This difference means you can’t share scripts with comments, so I
+      avoid them. I put some information in the project’s README.md (a GitHub
+      convention). Both Windows and Unix have an “echo” command that works the
+      same way, so you can use that for a little documentation and keep your scripts
+      language-independent.
+      I run this script from the Terminal panel in VSCode.
+    SQL
+      As suggested in the automation section above, all SQL should be archived in
+      files. That can be one file (“commands.sql”), or organized however you want
+      (create.sql, create-person.sql, insert-all.sql, etc.).
+      Some things to watch for when writing your SQL:
+      Name your columns. If you change the column order of your CREATE
+      TABLEs and you have been clear about what columns you are populating, you
+      might not need to adapt your INSERTs.
+      For these exercises, you are responsible for all key management. This is intentional: by having complete control/responsibility for primary and foreign keys,
+      you get a better sense of how they work and what needs to be done to keep them
+      consistent.
+    Git
+      VSCode has good Git integration. Git will keep versions for you, whether you
+      use it for sharing or backup, or if you just use it standalone. I will provide help setting up a local or a shared repository for anyone who is interested.
+  The Exercise
+    Create and populate a simple contact manager. It has a 1:many relation for
+    person:phone.
+
+    With your INSERT of sample data, please:
+      • have at least two people
+      • give one person more than one phone
+    Extra:
+      • maybe there are attributes that might be interesting to add to either of
+      these tables. Experiment with these.
+      • make a way to add a “related name” (or names) to a contact that would
+      take you to a different contact. Demonstrate with INSERTed data
+    Submit:
+      • batch file that builds and populates the above
+      • any SQL needed by the batch file

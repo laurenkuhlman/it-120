@@ -1,0 +1,49 @@
+Members
+Name,Date,Email,Phone,Address,City,State,Postal
+George Lowe,4/25/2019,glowe@msn.com,2065551243,120 Broadway,Seattle,WA,98122
+Sue Nelson,4/25/2019,nelson@hotmail.com,2065552212,300 S Pine,Seattle,WA,98121
+Lynn Rogers,5/01/2019,lynn.rogers@gmail.com,2065551212,222 Market,Seattle,Wa,98120
+Susan Brown,6/05/2020,subrown@gmail.com,2065552010,3802 Queen Anne,Seattle,WA,98123
+Jeff Cotton,8/15/2020,jeffcotton@cotton.org,2065554320,151 Elm Street,Seattle,WA,98221
+Peter Bently,8/16/2020,bentlyP@yahoo.com,2065551290,1303 8th Street,Bellevue,WA,98321
+Troy Lawrence,9/1/2020,lawrenceOfTroy@gmail.com,2065553354,333 Pike,Seattle,WA,98122
+Sue Hahn,9/10/2020,suehahn@liberty.com,2065551212,,,,
+Sebastian Johnson,9/11/2020,sb@johnson.org,2065553212,404 Loften Ave,Seattle,WA,98120
+
+Suppliers
+Name,date,e mail,Address,city,States,zip
+Jeff Cotton,8/1 5/2020,jeff cotton @cott on.org,151 Elm Street,S eattle,WA,98221
+Don Smith,9/1 0/2019,spg@s outhPu getFar ms.com,"South Puget F arms  132 West Me rchant
+South Puget Farms 2020 C apital Blvd",O lympia,WA,98112
+Susan Brown,6/0 5/2020,subrow n@gma il.com,3802 Queen Anne,S eattle,WA,98123
+
+Employees
+Name,Date Started,email,EmployeeType
+Lynn Rogers,1/1/2020,ynn.rogers@gmail.com,Supervisor salary
+Sue Hahn,9/15/2020,suehahn@liberty.com,Assistant hourly
+Geroge Lowe,1/1/2020,glowe@msn.com,Volunteer
+
+Store purchases from Suppliers
+Supplier,Date,item purchased,price paid,ExpirationDate,Employee
+Jeff Cotton,9/20/2020,20 lbs Red Delicious Apples,15.05,10/25/2020,Lynn
+,,4 lbs Blackberries,8.50,10/05/2020,
+,,12 lbs large tomatoes,12.00,10/05/2020,
+South Puget Farms,9/21/2020,20 5 lb bags wheat flour,20.00,12/30/2020`,George
+,,15 lbs Zucchini,10.00,10/20/2020,
+,,7 lbs of sunflower seed,21.30,2/20/2021,Lynn
+
+Store purchases by members
+Member Name,Date,Purchased,Total,Employee
+Troy lawrence,9/22/2020,"3 lbs of red D apples 3.75, 1 lb of blackberries 3.15 , 2 Zucchinis 2.30",9.20,Sue
+George Lowe,9/22/2020,2 loaves seed bread 9.00,store credit .45  8.65,Lynn
+Sebastian Johnson,9/23/2020,"1 bag wheat flower 2.25, 1/2 pound sunflower seeds 2.50, 1 lb blackberries 3.15",8.90,Lynn
+
+Store Inventory (Does not reflect the sales above)
+ProductID,Supplier,Date,Description,Units,Price Per Unit,Quantity,PullDate,UnitsWaste
+23456,Cotton,9/20/2020,Red Delicious apples,lbs,1.25,20,11/10/2020,
+23457,Cotton,9/20/2020,Blackberries,lbs,3.15,4,10/1/220,
+23458,Cotton,9/20/2020,Tomatoes,lbs,1.50,12,9/30/2020,
+23459,South Puget,9/21/2020,Wheat flour,5 Lb Bags,2.25,20,12/5/2020,
+23460,"""","""",Zucchinis,lbs,1.15,15,10/15/2020,
+23461,"""","""",Sunflower Seed,lbs,5.00,7,1/15/2021,
+23462,Sue Brown,9/23/2020,Wheat bread,loaves,4.50,5,10/13/2020,

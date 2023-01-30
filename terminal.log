@@ -1,0 +1,38 @@
+Laurens-MacBook-Pro:create-insert-activity laurenakuhlman$ cd /Users/laurenakuhlman/Dropbox/School/IT\ 120/create-insert-activity 
+Laurens-MacBook-Pro:create-insert-activity laurenakuhlman$ bash /Users/laurenakuhlman/Dropbox/School/IT\ 120/create-insert-activity/whatafunba.sh 
+CREATE TABLE
+CREATE TABLE
+INSERT 0 2
+INSERT 0 3
+CREATE TABLE
+INSERT 0 2
+Laurens-MacBook-Pro:create-insert-activity laurenakuhlman$ psql
+psql (15.1)
+Type "help" for help.
+
+laurenakuhlman=> \c test
+You are now connected to database "test" as user "laurenakuhlman".
+test=> SELECT * FROM person;
+ id |    name    |  birthday  |     address      |    city    | state | zip_code 
+----+------------+------------+------------------+------------+-------+----------
+  1 | John Smith | 1980-01-01 | 123 Main Street  | Anytown    | NY    | 10001
+  2 | Jane Doe   | 1985-02-02 | 456 Maple Avenue | Metropolis | CA    | 90210
+(2 rows)
+
+test=> SELECT * FROM phone;
+ id | person_id | phone_number |  type  | contact_name 
+----+-----------+--------------+--------+--------------
+  1 |         1 | 123-456-7890 | home   | John Smith
+  2 |         1 | 098-765-4321 | mobile | John Smith
+  3 |         2 | 111-222-3333 | work   | Jane Doe
+(3 rows)
+
+test=> SELECT * FROM related_name;
+ id | person_id | related_name 
+----+-----------+--------------
+  1 |         1 | John Doe
+  2 |         2 | Joe Smith
+(2 rows)
+
+test=> \q
+Laurens-MacBook-Pro:create-insert-activity laurenakuhlman$ 
